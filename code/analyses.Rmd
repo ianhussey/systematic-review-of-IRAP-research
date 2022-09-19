@@ -1,0 +1,81 @@
+---
+title: "Systematic review of IRAP studies"
+author: "Ian Hussey"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: haddock
+    theme: flatly
+    toc: yes
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+```
+
+# Dependencies
+
+```{r}
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(PRISMAstatement)
+library(janitor)
+library(DiagrammeRsvg)
+library(DiagrammeR)
+library(xml2)
+library(rsvg)
+
+```
+
+# Prisma statement flowchart
+
+```{r}
+
+p1 <- 
+  prisma(found = 115+116+78+63,
+         found_other = 3+1,
+         no_dupes = 153+78, 
+         extra_dupes_box = (115+116+78+63+3+1) - (153+78),
+         screened = 153+78, 
+         screen_exclusions = (153+78)-(106+54), 
+         full_text = 106+54,
+         full_text_exclusions = 2+3, 
+         qualitative = 104+51, 
+         #quantitative = 104+51,
+         labels = list(quantitative = "Total items found\n(n = 155)"),
+         width = 1000, 
+         height = 1000)
+
+p1
+
+p1 %>%
+  export_svg %>% 
+  charToRaw %>% 
+  #rsvg_png("prisma_flow_chart.png")
+  rsvg_pdf("prisma_flow_chart.pdf")
+
+```
+
+# How many IRAP articles
+
+N articles
+
+```{r}
+
+# get data
+data_review <- read_csv("../data/combined results/combined results - manually tidied.csv") %>%
+  janitor::clean_names()
+
+data_review %>%
+  distinct(author, title) %>%
+  summarize(n_articles = n()) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+```
+

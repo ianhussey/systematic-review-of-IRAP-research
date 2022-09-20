@@ -18,7 +18,7 @@ Search run on 2022-09-11.
 
 PRISMA flow chart:
 
-![prisma_flow_chart](/Users/Ian/git/systematic-review-of-IRAP-research/code/prisma_flow_chart.jpg)
+![prisma_flow_chart](code/prisma_flow_chart.jpg)
 
 ## License
 

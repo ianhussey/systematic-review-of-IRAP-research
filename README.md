@@ -24,5 +24,20 @@ PRISMA flow chart:
 
 Released under a CC-By 4.0 license.
 
+## TODO
 
+### Articles subsequently found which met the review's inclusion criteria but were missed. To be added to an updated review:
 
+Drake, Primeaux, Thomas, & Jorden (2018) Comparing Implicit Gender Stereotypes Between Women and Men with the Implicit Relational Assessment Procedure. DOI:10.1007/s12147-017-9189-6
+
+### Articles that i need to check they're excluded as they use a training IRAP or non standard IRAP (e.g., MD IRAP):
+
+Harte, Colin; Barnes-Holmes, Dermot; Barnes-Holmes, Yvonne; McEnteggart, Ciara; Gys, Jinthe; Hasler, Charlotte (2020) Exploring the potential impact of relational coherence on persistent rule-following: The first study
+
+Harte, Colin; Barnes-Holmes, Dermot; Barnes-Holmes, Yvonne; McEnteggart, Ciara (2021) Exploring the impact of coherence (through the presence versus absence of feedback) and levels of derivation on persistent rule-following
+
+Ghezzi, Elizabeth L.; Houmanfar, Ramona A.; Crosswell, Laura (2020) The motivative augmental effects of verbal stimuli on cooperative and conformity responding under a financially competing contingency in an analog work task
+
+### Remove for non english language
+
+Balan, Raquel Neves; Haydu, Veronica Bender; de Almeida, João Henrique; Oliveira Henklain, Marcelo Henrique; Zacyntho Zacarin, Marcela Roberto (2022) Teacher Behavior Checklist and Implicit Relational Assessment Procedure in teacher evaluation

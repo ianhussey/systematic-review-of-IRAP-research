@@ -10,15 +10,15 @@ No qualitative or quantitative synthesis is performed here; just the steps of fi
 
 Articles and book chapters written in English, reported data collected using an IRAP (excluding variants such as the MT-IRAP and training IRAP). All boolean search terms can be found in the "search terms and exclusion counts.docx" files.
 
-Search run on 2022-09-11.
+Searches run on 2018-12-23 and 2022-09-11. Results from review and update integrated.
 
 ## Results
 
-155 articles published between 2006 and 2022. Final list of articles, including authors, year, title, and DOI, can be found in "data/combined review/combined review_manually_tidied.csv". 
+153 articles published between 2006 and 2022. Final list of articles, including authors, year, title, and DOI, can be found in "data/combined review/combined review.csv". 
 
 PRISMA flow chart:
 
-![prisma_flow_chart](code/prisma_flow_chart.jpg)
+![prisma_flow_chart](code/prisma_flow_chart.png)
 
 ## License
 

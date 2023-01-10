@@ -3134,20 +3134,22 @@ border-radius: 0px;
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prisma</span>(<span class="at">found =</span> <span class="dv">115</span><span class="sc">+</span><span class="dv">116</span><span class="sc">+</span><span class="dv">78</span><span class="sc">+</span><span class="dv">63</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">found_other =</span> <span class="dv">3</span><span class="sc">+</span><span class="dv">2</span>,</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">no_dupes =</span> <span class="dv">153</span><span class="sc">+</span><span class="dv">79</span>, </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">extra_dupes_box =</span> (<span class="dv">115</span><span class="sc">+</span><span class="dv">116</span><span class="sc">+</span><span class="dv">78</span><span class="sc">+</span><span class="dv">63</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">2</span>) <span class="sc">-</span> (<span class="dv">153</span><span class="sc">+</span><span class="dv">79</span>),</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">screened =</span> <span class="dv">153</span><span class="sc">+</span><span class="dv">79</span>, </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">screen_exclusions =</span> (<span class="dv">153</span><span class="sc">+</span><span class="dv">79</span>)<span class="sc">-</span>(<span class="dv">106</span><span class="sc">+</span><span class="dv">54</span>), </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">full_text =</span> <span class="dv">106</span><span class="sc">+</span><span class="dv">49</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">full_text_exclusions =</span> <span class="dv">2</span><span class="sc">+</span><span class="dv">6</span>, </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">qualitative =</span> <span class="dv">104</span><span class="sc">+</span><span class="dv">49</span>, </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>         <span class="co">#quantitative = 104+49,</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">labels =</span> <span class="fu">list</span>(<span class="at">quantitative =</span> <span class="st">&quot;Total items found</span><span class="sc">\n</span><span class="st">(n = 153)&quot;</span>),</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">width =</span> <span class="dv">1000</span>, </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">height =</span> <span class="dv">1000</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>p1</span></code></pre></div>
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-fb401b9301e85c931cb0" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-fb401b9301e85c931cb0">{"x":{"diagram":"digraph prisma {\n    node [shape=\"box\", fontsize = 10];\n    graph [splines=ortho, nodesep=1, dpi = 72]\n    a -> nodups;\n    b -> nodups;\n    a [label=\"Records identified through\ndatabase searching\n(n = 372)\"];\n    b [label=\"Additional records identified\nthrough other sources\n(n = 5)\"]\n    nodups -> {incex; dups};\n       nodups [label=\"Records after duplicates removed\n(n = 232)\"];\n       dups [label=\"Duplicates excluded\n(n = 145)\"]; {rank=same; nodups dups}\n    incex -> {ex; ft}\n    incex [label=\"Records screened\n(n = 232)\"];\n    ex [label=\"Records excluded\n(n = 72)\"];\n    {rank=same; incex ex}\n    ft -> {qual; ftex};\n    ft [label=\"Full-text articles assessed\nfor eligibility\n(n = 155)\"];\n    {rank=same; ft ftex}\n    ftex [label=\"Full-text articles excluded,\nwith reasons\n(n = 8)\"];\n    qual -> quant\n    qual [label=\"Studies included in qualitative synthesis\n(n = 153)\"];\n    quant [label=\"Total items found\n(n = 153)\"];\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">extra_dupes_box =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>         </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">screened =</span> <span class="dv">153</span><span class="sc">+</span><span class="dv">79</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">screen_exclusions =</span> (<span class="dv">153-106</span>)<span class="sc">+</span>(<span class="dv">79-55</span>), </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">full_text =</span> <span class="dv">153</span><span class="sc">+</span><span class="dv">79</span> <span class="sc">-</span> ((<span class="dv">153-106</span>)<span class="sc">+</span>(<span class="dv">79-55</span>)),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">full_text_exclusions =</span> <span class="dv">2</span><span class="sc">+</span><span class="dv">8</span>, </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">qualitative =</span> <span class="dv">151</span>, </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>         <span class="co">#quantitative = 151,</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">labels =</span> <span class="fu">list</span>(<span class="at">quantitative =</span> <span class="st">&quot;Total items found</span><span class="sc">\n</span><span class="st">(n = 151)&quot;</span>),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">width =</span> <span class="dv">1000</span>, </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">height =</span> <span class="dv">1000</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>p1</span></code></pre></div>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f598d37af9f7be64fdca" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-f598d37af9f7be64fdca">{"x":{"diagram":"digraph prisma {\n    node [shape=\"box\", fontsize = 10];\n    graph [splines=ortho, nodesep=1, dpi = 72]\n    a -> nodups;\n    b -> nodups;\n    a [label=\"Records identified through\ndatabase searching\n(n = 372)\"];\n    b [label=\"Additional records identified\nthrough other sources\n(n = 5)\"]\n    nodups -> {incex; dups};\n       nodups [label=\"Records after duplicates removed\n(n = 232)\"];\n       dups [label=\"Duplicates excluded\n(n = 145)\"]; {rank=same; nodups dups}\n    incex -> {ex; ft}\n    incex [label=\"Records screened\n(n = 232)\"];\n    ex [label=\"Records excluded\n(n = 71)\"];\n    {rank=same; incex ex}\n    ft -> {qual; ftex};\n    ft [label=\"Full-text articles assessed\nfor eligibility\n(n = 161)\"];\n    {rank=same; ft ftex}\n    ftex [label=\"Full-text articles excluded,\nwith reasons\n(n = 10)\"];\n    qual -> quant\n    qual [label=\"Studies included in qualitative synthesis\n(n = 151)\"];\n    quant [label=\"Total items found\n(n = 151)\"];\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">%&gt;%</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  export_svg <span class="sc">%&gt;%</span> </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  charToRaw <span class="sc">%&gt;%</span> </span>
@@ -3162,7 +3164,7 @@ border-radius: 0px;
 <h1>Check count of articles against data</h1>
 <p>N articles</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get data</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data_review <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../data/combined results/combined results.csv&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data_review <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../data/combined results/data_systematic_review_of_irap_publications.csv&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>data_review <span class="sc">%&gt;%</span></span>
@@ -3181,7 +3183,7 @@ n
 <tbody>
 <tr>
 <td style="text-align:right;">
-153
+151
 </td>
 </tr>
 </tbody>

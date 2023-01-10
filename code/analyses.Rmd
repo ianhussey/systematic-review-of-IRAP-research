@@ -40,14 +40,16 @@ p1 <-
   prisma(found = 115+116+78+63,
          found_other = 3+2,
          no_dupes = 153+79, 
-         extra_dupes_box = (115+116+78+63+3+2) - (153+79),
+         extra_dupes_box = TRUE,
+         
          screened = 153+79, 
-         screen_exclusions = (153+79)-(106+54), 
-         full_text = 106+49,
-         full_text_exclusions = 2+6, 
-         qualitative = 104+49, 
-         #quantitative = 104+49,
-         labels = list(quantitative = "Total items found\n(n = 153)"),
+         screen_exclusions = (153-106)+(79-55), 
+        
+         full_text = 153+79 - ((153-106)+(79-55)),
+         full_text_exclusions = 2+8, 
+         qualitative = 151, 
+         #quantitative = 151,
+         labels = list(quantitative = "Total items found\n(n = 151)"),
          width = 1000, 
          height = 1000)
 
@@ -72,7 +74,7 @@ N articles
 ```{r}
 
 # get data
-data_review <- read_csv("../data/combined results/combined results.csv") %>%
+data_review <- read_csv("../data/combined results/data_systematic_review_of_irap_publications.csv") %>%
   janitor::clean_names()
 
 data_review %>%

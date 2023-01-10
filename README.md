@@ -14,7 +14,7 @@ Searches run on 2018-12-23 and 2022-09-11. Results from review and update integr
 
 ## Results
 
-153 articles published between 2006 and 2022. Final list of articles, including authors, year, title, and DOI, can be found in "data/combined review/combined review.csv". 
+151 articles published between 2006 and 2022. Final list of articles, including authors, year, title, and DOI, can be found in "data/combined review/combined review.csv". 
 
 PRISMA flow chart:
 
